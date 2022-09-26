@@ -1,0 +1,83 @@
+body{
+    background-color: rgba(255, 172, 55, 0.729);
+}
+h1{
+    color: rgb(65, 29, 3);
+    background-color: rgba(153, 72, 14, 0.548);
+    border-style:solid;
+    font-size: 2cm;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p{
+    text-align: center;
+    background-color: rgba(60, 130, 60, 0.45);
+    font-family:cursive;
+    font-size: 0.5cm;
+}
+
+h3{
+    text-align: center;
+    font-size: 0.5cm;
+    background-color: rgba(107, 135, 60, 0.66);
+    border-style:double;
+    text-decoration:underline;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.imagen{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 12cm;
+    height:7cm;
+}
+
+.lista{
+    background-color: rgba(85, 107, 47, 0.348);
+    font-size: 0.6cm;
+    display: block;
+    margin-left: 10cm;
+    margin-right: 10cm;
+}
+
+h3{
+    text-align: center;
+    background-color: rgba(107, 135, 60, 0.66);
+    text-decoration:underline;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.video{
+    background-color: rgba(56, 70, 31, 0.753);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10cm;
+    width: 10cm;
+}
+
+
+.lista2{
+    background-color: rgba(85, 107, 47, 0.348);
+    font-size: 0.6cm;
+    display: block;
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+h2{
+    background-color: rgba(153, 72, 14, 0.548);
+    border-style:solid;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(65, 29, 3);
+    text-align: center;
+}
+
+.mapa{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20cm;
+    height: 8cm;
+}
