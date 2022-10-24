@@ -81,3 +81,42 @@ h2{
     width: 20cm;
     height: 8cm;
 }
+
+a{
+    display: block;
+    text-align: right;
+}
+
+footer{
+    display: flex;
+    align-items:center;
+    background-color: rgba(107, 135, 60, 0.66);
+    justify-content:flex-end;
+
+}
+
+.logoface{
+    display: flex;
+    height: 20pt;
+    width: 20pt;
+    margin-left: 10px;
+}
+
+.logoig{
+    display: flex;
+    height: 20pt;
+    width: 20pt;
+    margin-left: 10px;
+}
+
+.container-boton{
+    position: fixed;
+    border-radius: 50%;
+    bottom: 50px;
+    right: 50px;
+}
+
+.botonwp{
+    height: 50pt;
+    width: 50pt;
+}
