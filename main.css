@@ -28,6 +28,14 @@ header{
     margin-left: 1em;
 }
 
+.iconocel {
+    display: flex;
+    width: 10vw;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+}
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -118,6 +126,7 @@ a{
     text-align: right;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.3em;
+    color:rgb(60, 25, 0);
 }
 
 footer{
@@ -177,3 +186,23 @@ footer{
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand&display=swap');
+
+@media (max-width:768px) {
+    body {background-color: rgba(250, 146, 0, 0.137)}
+}
+
+@media screen and (max-width:768px) {
+    nav {flex-direction: column;}
+}
+
+@media (max-width:575px) {
+    body {font-size: 0.5rem;}
+}
+
+@media (max-width:575px) {
+    h1 {font-size: 0.8rem;}
+}
+
+@media (min-width:700px) {
+    .iconocel {display: none;}
+}
