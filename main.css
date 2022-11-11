@@ -139,6 +139,13 @@ footer{
     justify-content: center;
 }
 
+.boton {
+    display: flex;
+    align-items: center;
+    margin-right: -10em;
+    margin-left: 15em;
+}
+
 .mapa{
     display: flex;
     width: 25vw;
