@@ -1,149 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Santiago del Estero">
-    <meta name="keywords" content="Receta, Ideas, Conocer, Mapa, Santiago del Estero">
-    <meta name="author" content="Stefi Lavirgen">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria Obras">
+    <meta name="keywords" content="galeria, obras, pintura, acuarela, oleo, acrilico, arte, estilos, comprar, artista, plastica, arte plastico">
+    <meta name="author" content="Stefi Lavirgen">
     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <title>Tamales Santiagueños</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Galeria de Arte Stefanía Lavirgen</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./main.css">
-  
+    <script src="main.js"></script>
 </head>
-<body>
-  <script src="./js/main.js"></script>
 
-    <audio src="./audio/Quiero Nombrar A Mi Pago.mp3" controls></audio>
-    
+<body>
     <header>
-        <img class="logo" src="./imagenes/escudosantiago.jpg" alt="logo">
-        <h1 id="titulo">Tamales Santiagueños</h1>
-        <img class="iconocel" src="./imagenes/iconocel.jpg">
+        <div>
+            <h1 class="titulo">Stefanía Lavirgen</h1>
+        </div>
+        <br>
+        <div class="subtitulo">
+            <h2>Artista Plástica</h2>
+        </div>
         <div class="iconflex">
-            <img src="./imagenes/logowp.jpg">
-            <img src="./imagenes/logoface.jpg">
-            <img src="./imagenes/logoig.jpg">
-            <img src="./imagenes/logoyoutube.jpg">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img id="imgZoom1" onmousemove="zoomIn()" onmouseleave="zoomOut()" src="./imagenes/logoface.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img id="imgZoom2" onmousemove="zoomIn2()" onmouseleave="zoomOut2()" src="./imagenes/logoig.jpg" alt="Instagram">
+            </a>
+            <a href="https://ar.linkedin.com/" target="_blank">
+                <img id="imgZoom3" onmousemove="zoomIn3()" onmouseleave="zoomOut3()" src="./imagenes/logolinkedin.jpg" alt="Linkedin">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img id="imgZoom4" onmousemove="zoomIn4()" onmouseleave="zoomOut4()" src="./imagenes/logowp.jpg" alt="Whatsapp">
+            </a>
         </div>
     </header>
-<br>
-<button onclick="cambiarfondo()">Modo Nocturno</button>
-<br>
-<br>
-    <nav>
-    <a id="link" target="_blank" href="https://cookpad.com/ar/recetas/4483562-humita-santiaguena">Humita Santiagueña</a>
-    <a id="link1" target="_blank" href="https://cookpad.com/pa/recetas/114453-empanadas-santiaguenas">Alternativa: Empanadas Santiagueñas</a>
-    <a id="link2" target="_blank" href="http://www.santiagotur.com/alfajor-santiagueno-con-anis-y-alcohol-puro/">Para el postre: alfajores</a>
-    <a id="link3" target="_blank" href="http://www.santiagotur.com/fama-justificada-del-arrope-de-tuna-y-de-chanar/">Mermelada para desayuno o merienda</a>
+
+    <nav class="site-content-header">
+        <div class="container">
+            <div class="page-breadcrumb">
+                <span class="athelier">ATHELIER</span>
+            </div>
+        </div>
+        <div>
+            <a id="nav1" title="obras" href="#section">OBRAS</a>
+            <a id="nav2" title="explorar" href="#section2">EXPLORÁ DE CERCA</a>
+            <a id="nav3" title="sobremi" href="#sobremi">SOBRE LA ARTISTA</a>
+            <a id="nav4" title="adquirir" href="#adquirir">ADQUIRIR OBRAS</a>
+        </div>
     </nav>
-    <p>El tamal es un plato típico del norte, elaborado a partir de pasta de maiz y carne. Su opción sin carne se define como Humita.</p>
-    <p>La pasta es envuelta entre hojas de maiz, y cocida al vapor o en agua directamente. Existen indicios que afirman que los tamales ya eran producidos en Mesoamérica en la época prehispánica. 
-    La palabra Tamal se define como "envuelto", en lengua Náhualt.</p>
-    <img class="imagen" src="./imagenes/tamal.jpg">
-    <br>
-    
-    <h3>Ingredientes que vamos a utilizar para su preparación:</h3>
-    <ul class="lista">
-        <li>Harina de Maiz: 1kg.</li>
-        <li>Zapallo: 500grs.</li>
-        <li>Chalas de choclo.</li>
-        <li>Carne (opcional).</li>
-        <li>Cebolla.</li>
-        <li>Morrón.</li>
-        <li>Huevo.</li>
-        <li>Sal y pimienta a gusto.</li>
-    </ul>
 
-    <h3>Manos a la obra!</h3>
-    <ol class="lista2">
-        <li>Cocinar en abundante agua hirviendo la harina de maiz (polenta), junto con el zapallo cortado en trozos pequeños. Condimentar con sal y pimienta a gusto una vez que la preparación está espesa.</li>
-        <li>Picar y saltear hasta dorar, la cebolla y el morrón. Agregar la carne (opcional) cortada en cubitos y dejar cocinar.</li>
-        <li>Una vez cocida la carne incorporada, agregar huevo duro picado, y condimentar con sal y pimienta a gusto.</li>
-        <li>Estirar sobre la mesa las chalas de maiz, formando una base, colocar la preparación de pasta de maiz y estirarla cubriendo casi la totalidad de la base de chalas.</li>
-        <li>Por encima de la pasta, agregar 2 cucharadas de la preparación de carne y esparcir pero sin llegar el borde de la mezcla anterior.</li>
-        <li>Cerrar como un paquete y atarlo con hilo de cocina o una tira de la misma chala.</li>
-    </ol>
-    <h3>Con este video no tenés excusas para no hacerlos:</h3>
-  <video class="video" src="./videotamales.mp4" controls poster="./chefcito.jpg"></video>
+    <section id="section" class="section">
+        <main>
+            <hr class="featurette-divider">
 
-  <br>
-  <br>
-  <br>
-  <h2 id="recetas">Más recetas norteñas</h2>
-  
-  <div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-3">
-            <div class="card">
-                <img src="./imagenes/empanadasaltena.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Empanada Salteña</h5>
-                  <p class="card-text">En la actualidad se suelen preparar de la misma forma que hace doscientos años, con carne magra, cebolla de verdeo, comino, pimentón, mucho ají.</p>
-                  <a href="https://www.paulinacocina.net/receta-empanadas-saltenas/25274" class="btn btn-primary">Mirá la receta!</a>
+            <div class="row featurette">
+                <div class="">
+                    <h2 class="featurette-heading fw-normal lh-1">PUESTA DE SOL<span class="text-muted">.acuarela.</span></h2>
+                    <p class="lead">Esta es una obra a modo de ejemplo. Acá se detalla sobre la obra en cuestión.</p>
                 </div>
-              </div>
-        </div>  
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="./imagenes/empanadatucumana.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Empanada Tucumana</h5>
-                      <p class="card-text">El matambre es una parte fundamental de las empanadas tucumanas, además de los 13 repulgues.</p>
-                      <a href="https://www.paulinacocina.net/empanadas-tucumanas/27063" class="btn btn-primary">Mirá la receta!</a>
+                <div class="">
+                    <img class="obra1" src="./imagenes/acuarela.jpg" style="height: 30em" style="width: 25em">
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="">
+                    <h2 class="featurette-heading fw-normal lh-1">THE MOON<span class="text-muted">.acuarela.</span></h2>
+                    <p class="lead">Esta es una obra a modo de ejemplo. Acá se detalla sobre la obra en cuestión.</p>
+                </div>
+                <div class="">
+                    <img class="obra2" src="./imagenes/acuarela2.jpg" style="height:30em" style="width:25em">
+                </div>
+            </div>
+
+                <hr class="featurette-divider">
+
+                <div class="row featurette">
+                    <div class="">
+                        <h2 class="featurette-heading fw-normal lh-1">OTOÑO. <span
+                                class="text-muted">acuarela.</span></h2>
+                        <p class="lead">Esta es una obra a modo de ejemplo. Acá se detalla sobre la obra en cuestión.</p>
                     </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="./imagenes/humita.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Humita</h5>
-                      <p class="card-text">Otra opción del Tamal es la Humita, y la diferencia es que no lleva carne.</p>
-                      <a href="https://www.lapaulina.com.ar/es/recetas/humanita-en-chala" class="btn btn-primary">Mirá la receta!</a>
+                    <div class="">
+                        <img class="obra3" src="./imagenes/acuarela3.jpg" style="height:20em" style="width:15em">
                     </div>
-                  </div>
-              </div>
-              <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card">
-                    <img src="./imagenes/locrojujeno.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Locro Jujeño</h5>
-                      <p class="card-text">El secreto está en dejar reposar el maiz toda la noche.</p>
-                      <a href="https://www.todojujuy.com/jujuy/receta-facil-y-rica-del-tradicional-locro-del-25-mayo-n134832" class="btn btn-primary">Mirá la receta!</a>
+                </div>
+
+                    <hr class="featurette-divider">
+                    <div class="">
+                        <h2 class="featurette-heading fw-normal lh-1">CHINA<span
+                                class="text-muted">.acuarela.</span></h2>
+                        <p class="lead">Esta es una obra a modo de ejemplo. Acá se detalla sobre la obra en cuestión.</p>
                     </div>
-                  </div>
-              </div>
+                    <div class="">
+                        <img class="obra4" src="./imagenes/acuarela4.jpg" style="height:25em" style="width:18em">
+                    </div>
+                </div>    
+        </main>
+    </section>
+    <br>
+    <br>
+
+    <section id="section2" class="section2">
+        <p class="explorar">EXPLORÁ DE CERCA</p>
+        <div class="magnify1">
+            <div class="magnifier1" style="background-image:url(./imagenes/acuarela.jpg);"></div>
+            <div class="magnified1">
+                <img class="acuarela1" src="./imagenes/acuarela.jpg" alt="acuarela">
+            </div>
+
+            <script>
+                $(".magnified1").hover(function (e) {
+                    var imgPosition = $(".magnify1").position(),
+                        imageHeight = $(".magnified1").height(),
+                        imageWidth = $(".magnified1").width();
+
+                    $(".magnifier1").show();
+                    $(this).mousemove(function (e) {
+                        var posX = e.pageX - imgPosition.left,
+                            posY = e.pageY - imgPosition.top,
+                            percX = (posX / imageWidth) * 100,
+                            percY = (posY / imageHeight) * 100,
+                            perc = percX + "%" + percY + "%";
+
+                        $(".magnifier1").css({
+                            top: posY,
+                            left: posX,
+                            backgroundPosition: perc
+                        });
+                    });
+                }, function () {
+                    $(".magnifier1").hide();
+                });
+            </script>
         </div>
-    </div>
-  </div>
-  <br>
-  <br>
-  <h2 id="map">Conocé Santiago del Estero!</h2>
-  <br>
-    <footer>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112936.39235762283!2d-64.33708950776983!3d-27.8016971373389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b526adf33f96b%3A0x9a9d18ed7764c8d6!2sSantiago%20del%20Estero!5e0!3m2!1ses!2sar!4v1664226443939!5m2!1ses!2sar"></iframe>
-        <div class="iconflex1">
-            <img src="./imagenes/logowp.jpg">
-            <img src="./imagenes/logoface.jpg">
-            <img src="./imagenes/logoig.jpg">
-            <img src="./imagenes/logoyoutube.jpg">
+    </section>
+
+    <section class="section3">
+        <div class="magnify2">
+            <div class="magnifier2" style="background-image:url(./imagenes/acuarela2.jpg);"></div>
+            <div class="magnified2">
+                <img class="acuarela2" src="./imagenes/acuarela2.jpg" alt="acuarela">
+            </div>
+
+            <script>
+                $(".magnified2").hover(function (e) {
+                    var imgPosition = $(".magnify2").position(),
+                        imageHeight = $(".magnified2").height(),
+                        imageWidth = $(".magnified2").width();
+
+                    $(".magnifier2").show();
+                    $(this).mousemove(function (e) {
+                        var posX = e.pageX - imgPosition.left,
+                            posY = e.pageY - imgPosition.top,
+                            percX = (posX / imageWidth) * 100,
+                            percY = (posY / imageHeight) * 100,
+                            perc = percX + "%" + percY + "%";
+
+                        $(".magnifier2").css({
+                            top: posY,
+                            left: posX,
+                            backgroundPosition: perc
+                        });
+                    });
+                }, function () {
+                    $(".magnifier2").hide();
+                });
+            </script>
         </div>
-        <div class="boton">
-                <button onclick="copyright()">Copyright</button>
+    </section>
+
+    <section class="section4">
+        <div class="magnify3">
+            <div class="magnifier3" style="background-image:url(./imagenes/acuarela3.jpg);"></div>
+            <div class="magnified3">
+                <img class="acuarela3" src="./imagenes/acuarela3.jpg" alt="acuarela">
+            </div>
+
+            <script>
+                $(".magnified3").hover(function (e) {
+                    var imgPosition = $(".magnify3").position(),
+                        imageHeight = $(".magnified3").height(),
+                        imageWidth = $(".magnified3").width();
+
+                    $(".magnifier3").show();
+                    $(this).mousemove(function (e) {
+                        var posX = e.pageX - imgPosition.left,
+                            posY = e.pageY - imgPosition.top,
+                            percX = (posX / imageWidth) * 100,
+                            percY = (posY / imageHeight) * 100,
+                            perc = percX + "%" + percY + "%";
+
+                        $(".magnifier3").css({
+                            top: posY,
+                            left: posX,
+                            backgroundPosition: perc
+                        });
+                    });
+                }, function () {
+                    $(".magnifier3").hide();
+                });
+            </script>
+        </div>
+    </section>
+
+    <section class="section5">
+        <div class="magnify4">
+            <div class="magnifier4" style="background-image:url(./imagenes/acuarela4.jpg);"></div>
+            <div class="magnified4">
+                <img class="acuarela4" src="./imagenes/acuarela4.jpg" alt="acuarela">
+            </div>
+
+            <script>
+                $(".magnified4").hover(function (e) {
+                    var imgPosition = $(".magnify4").position(),
+                        imageHeight = $(".magnified4").height(),
+                        imageWidth = $(".magnified4").width();
+
+                    $(".magnifier4").show();
+                    $(this).mousemove(function (e) {
+                        var posX = e.pageX - imgPosition.left,
+                            posY = e.pageY - imgPosition.top,
+                            percX = (posX / imageWidth) * 100,
+                            percY = (posY / imageHeight) * 100,
+                            perc = percX + "%" + percY + "%";
+
+                        $(".magnifier4").css({
+                            top: posY,
+                            left: posX,
+                            backgroundPosition: perc
+                        });
+                    });
+                }, function () {
+                    $(".magnifier4").hide();
+                });
+            </script>
+        </div>
+    </section>
+    <br>
+    <section id="sobremi" class="sobremi">
+        <div>
+            <p class="titulosobremi">SOBRE MI</p>
+        </div>
+        <div>
+            <img class="fotomia" src="./imagenes/fotomia.jpg.jpg">
+            <p class="presentacion">Mi nombre es Stefanía Rocío Lavirgen Ercoli.
+                Nací en el 95`por lo que me considero millenial. A los 7 años mis papás me llevaron a mi primer taller de pintura, y asistí hasta mis 18 que me recibí de Profesora. Estudie en la Escuela de Artes Visuales de Bahia BLanca, lugar en el que nací. También recibida de allí, en ningún momento dejé de pintar.
+                Espero poder hacerlo por muchos años más.
+            </p>
+        </div>
+    </section>
+
+    <section id="adquirir" class="adquirir">
+        <p class="tituloadquirir">ADQUIRIR OBRAS</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="./imagenes/acuarela.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">PUESTA DE SOL</h5>
+                          <p class="card-text">...</p>
+                          <a class="botonadquirir" href="#" class="btn btn-primary">ADQUIRILA</a>
+                        </div>
+                      </div>
+                </div>  
+                      <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="./imagenes/acuarela2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">THE MOON</h5>
+                              <p class="card-text">...</p>
+                              <a class="botonadquirir" href="#" class="btn btn-primary">ADQUIRILA</a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="./imagenes/acuarela3.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">OTOÑO</h5>
+                              <p class="card-text">...</p>
+                              <a class="botonadquirir" href="#" class="btn btn-primary">ADQUIRILA</a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="card">
+                            <img src="./imagenes/acuarela4.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">CHINA</h5>
+                              <p class="card-text">...</p>
+                              <a class="botonadquirir" href="#" class="btn btn-primary">ADQUIRILA</a>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+            </div>
+          </div>
+    </section>
+    <br>
+    <br>
+    <footer id="footer">
+        <br>
+        <a id="btn" href="#" title="VOLVER">VOLVER</a>
+        <p class="copyright">© 2022 Stefanía Lavirgen.</p>
+        <div class="iconflex">
+            <a href="https://www.facebook.com/" target="_blank">
+                <img id="imgZoom5" onmousemove="zoomInAbajo5()" onmouseleave="zoomOutAbajo5()" src="./imagenes/logoface.jpg" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img id="imgZoom6" onmousemove="zoomInAbajo6()" onmouseleave="zoomOutAbajo6()" src="./imagenes/logoig.jpg" alt="Instagram">
+            </a>
+            <a href="https://ar.linkedin.com/" target="_blank">
+                <img id="imgZoom7" onmousemove="zoomInAbajo7()" onmouseleave="zoomOutAbajo7()" src="./imagenes/logolinkedin.jpg" alt="Linkedin">
+            </a>
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img id="imgZoom8" onmousemove="zoomInAbajo8()" onmouseleave="zoomOutAbajo8()" src="./imagenes/logowp.jpg" alt="Whatsapp">
+            </a>
         </div>
     </footer>
-
-    <script src="./main.js"></script>
-
-  <div class="container-boton">
-    <a href="https://web.whatsapp.com/" target="_blank">
-        <img class="botonwp" src="./imagenes/logowp.jpg" alt="Whatsapp">
-    </a>
-  </div>
-  <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
